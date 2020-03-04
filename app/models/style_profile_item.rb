@@ -1,0 +1,2 @@
+class StyleProfileItem < ApplicationRecord
+end
