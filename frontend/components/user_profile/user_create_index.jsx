@@ -8,6 +8,8 @@ class CreateUserIndex extends React.Component {
         super(props)
 
         //TODO: The User create process has 2 component steps: Intro, UserRegistration
+
+        //A change
     }
 
     componentDidMount() {
