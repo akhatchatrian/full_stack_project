@@ -12,7 +12,7 @@
     vertical-align: baseline;
     background: transparent;
     text-decoration: none;
-    color: inherit;
+    color: inherit; 
 }
 
 .header-nav {
@@ -26,6 +26,7 @@
     padding: 15px;
     max-width: 60%;
     height: 15px;
+    background-color: white;
 }
 
 .header-nav-links {
@@ -66,6 +67,7 @@
 }
 
 .header-nav-background {
+    background-color: white;
     position: fixed;
     top: 0;
     width: 100%;

@@ -1,18 +1,4 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
-    text-decoration: none;
-    color: inherit;
-} */
 
- /* div {
-    outline: solid black 1px;
- } */
 
 .login-page {
     margin: auto;
@@ -35,21 +21,21 @@
     color: rgb(47, 46, 46);
 }
 
-.login-form-field {
+.user-form-field {
     height: 50px;
     padding-top: 15px;
     border:lightgrey solid 1px;
     width: 630px;
 }
 
-.login-form-fields, input {
+.user-form-fields, input {
     height: 29px;
     display: block;
     padding-left: 15px;
     width: 98%;
 }
 
-.login-form-fields, label {
+.user-form-fields > label {
     display: block;
     border-bottom: 0px;
     padding-left: 15px;

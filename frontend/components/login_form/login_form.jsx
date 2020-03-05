@@ -41,14 +41,14 @@ export class LoginForm extends React.Component {
         <form className="login-form" onSubmit={this.handleSubmit}>
           <p>Sign In</p>
           {this.renderErrors()}
-          <div className="login-form-field">
+          <div className="user-form-field">
             <label>Email</label>
             <input type="text" 
               value={this.state.email} 
               onChange={this.update('email')}
             />
           </div>
-          <div className="login-form-field">
+          <div className="user-form-field">
             <label>Password</label>
             <input type="password"
               value={this.state.password}
