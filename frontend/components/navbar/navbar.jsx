@@ -18,20 +18,22 @@ export class Navbar extends React.Component {
         } else {
             return (
                <div>
-                   <div className="header-nav-background">
-                    <nav className="header-nav" >
-                        <div className="header-nav-links">
+
+                   <div className="container">
+                    <nav className="row nav" >
+                        <div className="col nav-links">
                             <Link to="/">STITCH CLONE</Link>
-                            <div className="header-nav-links-sub">
-                                <Link>Women</Link>
-                                <Link>Men</Link>
-                            </div>
+                            <Link>Women</Link>
+                            <Link>Men</Link>
+                            <Link>Kids</Link>
                         </div>
-                        <button className="header-nav-login">
-                            <Link to="/login">Sign In</Link>
-                        </button>
+                        <div className="col text-right">
+                            <Link className="button-secondary" to="/login">Sign In</Link>
+                        </div>
                     </nav>
                    </div>
+
+                   
                </div>
             )
         }

@@ -1,86 +1,67 @@
- /* div {
-    outline: solid black 1px;
- } */
-
-
-.intro-questions {
-    margin-top: 45px;
-    padding-top: 54px;
-    min-height: 600px;
-    padding-left: 0px;
-    background-color: #f8f7f6;
+.intro-wrapper {
+    padding: 54px;
 }
 
-.intro-icon {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #eeece8;;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    text-align: center;
+.intro-title > h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color:#2f3237
 }
 
 .intro-label {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
-    font-size: 24px;
+    padding: 16px;
+    color:#2f3237
 }
 
-.intro-questions-radio {
+.radio-wrapper {
+    text-align: center;
+    margin-bottom: 1.5rem;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70px;
+    position: relative;
 }
 
-.intro-next-button {
-    color: #f05d61;
-    border: 1px solid #f05d61;
-    line-height: 32px;
-    padding: .4rem 1.75rem;
-    font-size: 1.125rem;
-    margin: 0;
-    background-color: #fff;
-    align-items: center;
+.radio-wrapper:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #cecece;
+    width: 100%;
+    left: 50%;
+    top: calc(.5rem + 1px);
+    transform: translateX(-50%);
 }
 
-.user {
-    margin-top: 45px;
-    padding-top: 54px;
-    min-height: 600px;
-    padding-left: 0px;
-    background-color: #f8f7f6;
+.radio-button {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+    border: 0;
+    background: none;
+    margin-bottom: 16px;
 }
 
-.user-label {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    text-align: center;
-    font-size: 24px;
-}
-
-.user-form-field {
-    height: 50px;
-    padding-top: 15px;
-    border:lightgrey solid 1px;
-    width: 630px;
-}
-
-.user, input {
-    height: 29px;
+.radio-button:before {
+    content: "";
+    background: #fff;
+    border: 2px solid #cecece;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
     display: block;
-    padding-left: 15px;
-    width: 98%;
+    z-index: 1;
+    margin: 0 auto;
 }
 
-.user > label {
-    display: block;
-    border-bottom: 0px;
-    padding-left: 15px;
-    font-family: sans-serif;
-    font-size: 13px;
-    color: rgb(47, 46, 46);
+.radio-button:checked:before {
+    animation-fill-mode: forwards;
+    background-color: #1695a3;
+    border-color: #1695a3;
+    transform: scale(1.3);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 120%;
+    animation: cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
+

@@ -14,6 +14,106 @@
  *= require_self
  */
 
- .main {
-     width: 100%;
- }
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+div {
+    outline: black solid 1px;
+}
+
+.center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.button-secondary {
+    border: 1px solid #d5d3d1;
+    padding: .1rem .5rem .2rem;
+    font-family: BrandonText-Regular, sans-serif;
+    font-size: .9375rem;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.button-tertiary {
+    color: #f05d61;
+    border: 1px solid #f05d61;
+    line-height: 32px;
+    padding: .4rem 1.75rem;
+    font-size: 1.125rem;
+    margin: 0;
+    background-color: #fff;
+    cursor: pointer;
+    font-family: BrandonText-Regular, sans-serif;
+    font-size: 18px;
+}
+
+.button-tertiary:hover {
+    border: blueviolet 1px solid;
+}
+
+.jumbo {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 600px;
+    background-color: #f8f7f6;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle {
+    background: #ECEBEB;
+    border-radius: 50%;
+    width: 84px;
+    height: 84px;
+}
