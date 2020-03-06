@@ -37,18 +37,18 @@ export class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="login-page">
-        <form className="login-form" onSubmit={this.handleSubmit}>
+      <div className="">
+        <form className="" onSubmit={this.handleSubmit}>
           <p>Sign In</p>
           {this.renderErrors()}
-          <div className="user-form-field">
+          <div className="">
             <label>Email</label>
             <input type="text" 
               value={this.state.email} 
               onChange={this.update('email')}
             />
           </div>
-          <div className="user-form-field">
+          <div className="">
             <label>Password</label>
             <input type="password"
               value={this.state.password}
@@ -56,7 +56,7 @@ export class LoginForm extends React.Component {
             />
           </div>
             <br/>
-            <input className="login-button" type="submit" value="Sign In"/>
+            <input className="" type="submit" value="Sign In"/>
         </form>
       </div>
     );

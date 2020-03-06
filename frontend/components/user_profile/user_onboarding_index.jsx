@@ -15,9 +15,7 @@ class UserOnboardingComponent extends React.Component {
     componentDidMount() {
         this.props.getStyleItems();
     }
-    
-    //TODO: UserInfo, StyleQuiz, Conclusion
-
+  
     completeStep() {
         if (this.state.currentStep < 4) {
             this.setState((prevState) => ({

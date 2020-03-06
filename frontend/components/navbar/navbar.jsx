@@ -17,9 +17,7 @@ export class Navbar extends React.Component {
             )
         } else {
             return (
-               <div>
-
-                   <div className="container">
+                <div className="container">
                     <nav className="row nav" >
                         <div className="col nav-links">
                             <Link to="/">STITCH CLONE</Link>
@@ -31,10 +29,7 @@ export class Navbar extends React.Component {
                             <Link className="button-secondary" to="/login">Sign In</Link>
                         </div>
                     </nav>
-                   </div>
-
-                   
-               </div>
+                </div>
             )
         }
         

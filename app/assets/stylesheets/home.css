@@ -3,6 +3,89 @@
     padding-bottom: 15px;
 }
 
-.home-background {
-    background-image: url(https://images.freeimages.com/images/large-previews/b5a/dragon-fly-1391358.jpg);
+.container h2 {
+    font-family: sans-serif;
+    font-size: 26.8px;
+    margin-top: 22.4px;
+    margin-bottom: 8px;
+    color: #2f3237;
+}
+
+.container p {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-size: 1rem;
+    color: #2f3237;
+}
+
+.description {
+    margin: 0 auto 1.5rem;
+    max-width: 38.625rem;
+    color: #2f3237;
+}
+
+.picture-links {
+    max-width: 19.75rem;
+    margin: 0 .75rem;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+span {
+    position: absolute;
+    bottom: 2rem;
+    padding: .375rem 1rem;
+    border: 0;
+    background: #fff;
+    color: #2f3237;
+    line-height: 1.25rem;
+    letter-spacing: .711111px;
+}
+
+.list-container {
+    padding-top: 44px;
+    padding-bottom: 44px;
+}
+
+.list-title {
+    padding-bottom: 16px;
+    color: #2f3237;
+}
+
+.list-ol {
+    display: flex;
+    margin: 2rem 0 2.5rem;
+    list-style-type: none;
+    color: #2f3237;
+}
+
+.list-li {
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    border-top: 0;
+    border-bottom: 0;
+    border-right: 2px solid #e8e8e8;
+    padding: .625rem 2rem;
+    text-align: center;
+    font-size: 16px;
+}
+
+.list-li-last {
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    border-top: 0;
+    border-bottom: 0;
+    padding: .625rem 2rem;
+    text-align: center;
+    font-size: 16px;
+}
+
+.list-border {
+    border: 2px solid #e8e8e8;
+    padding-left: 15px;
+    padding-right: 15px;
 }

@@ -65,3 +65,8 @@
     animation: cubic-bezier(0.25, 0.1, 0.25, 1.0);
 }
 
+.intro-questions {
+    max-width: 26rem;
+    width: 100%
+}
+
