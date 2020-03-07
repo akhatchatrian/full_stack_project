@@ -1,0 +1,47 @@
+
+.login-form {
+    padding-top: 100px;
+    padding-left: 637px;
+}
+
+.login-title {
+    margin-bottom: 15px;
+    font-family: "Grad", serif;
+    font-size: 32px;
+    color:#2f3237
+}
+
+.login-inputs {
+    height: 50px;
+    padding-top: 15px;
+    box-sizing: content-box;
+    border: 1px solid #CECBC9;
+    width: 100%;
+    max-width: 630px;
+}
+
+.login-label {
+    font-family: "BrandonText-Regular", sans-serif;
+    font-size: 13px;
+    display: block;
+    padding-left: 15px;
+}
+
+.login-field {
+    font-family: "BrandonText-Regular", sans-serif;
+    font-size: 16px;
+    border: none;
+    height: 27px;
+    width: calc(100% - 16px);
+    outline: none;
+    padding-left: 15px;
+}
+
+.login-button-container {
+    padding-top: 70px;
+}
+
+.login-button {
+    max-width: 325px;
+    width: 90%;
+}

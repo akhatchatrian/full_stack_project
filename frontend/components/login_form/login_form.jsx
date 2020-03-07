@@ -37,27 +37,37 @@ export class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className="">
-        <form className="" onSubmit={this.handleSubmit}>
-          <p>Sign In</p>
-          {this.renderErrors()}
-          <div className="">
-            <label>Email</label>
-            <input type="text" 
-              value={this.state.email} 
-              onChange={this.update('email')}
-            />
+      <div className="jumbo-2">
+        <div className="row">
+          <div className="col text-center">
+
+            <form className="login-form" onSubmit={this.handleSubmit}>
+              <div className="login-title text-left">
+                <p>Sign In</p>
+              </div>
+              {this.renderErrors()}
+              <div className="login-inputs text-left">
+                <label className="login-label">Email</label>
+                <input className="login-field" type="text" 
+                  value={this.state.email} 
+                  onChange={this.update('email')}
+                />
+              </div>
+              <div className="login-inputs text-left">
+                <label className="login-label">Password</label>
+                <input className="login-field" type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                />
+              </div>
+                <div className="login-button-container text-left">
+                  <input className="button-primary login-button" type="submit" value="Sign In"/>
+                </div>
+            </form>
+
           </div>
-          <div className="">
-            <label>Password</label>
-            <input type="password"
-              value={this.state.password}
-              onChange={this.update('password')}
-            />
-          </div>
-            <br/>
-            <input className="" type="submit" value="Sign In"/>
-        </form>
+        </div>
+
       </div>
     );
   }

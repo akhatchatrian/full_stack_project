@@ -1,5 +1,5 @@
 .footer {
-    height: 470px;
+    height: 349px;
     width: 1170;
     border-bottom: 2px solid #e8e8e8;;
     border-top: 2px solid #e8e8e8;;
@@ -16,4 +16,27 @@
     font-family: serif;
     font-weight: normal;
     padding-bottom: 40px;
+}
+
+.footer-2-title {
+    color: #aeaaa7;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.footer-list-titles {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #aeaaa7;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 0px;
+    margin-bottom: 8px;
+}
+
+.footer-list > li {
+    line-height: 32px;
+    color: #2f3237;
+    font-size: 14px;
 }

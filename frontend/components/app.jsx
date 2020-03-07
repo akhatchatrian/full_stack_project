@@ -11,7 +11,7 @@ import UserOnboardingContainer from './user_profile/user_onboarding_container';
 export const App = () => {
     return (
         <div>
-            <header>
+            <header className="main-header">
                 <NavbarContainer />
             </header>
             <div className="main">
@@ -23,11 +23,11 @@ export const App = () => {
                 <div className="container footer">
                     <div className="row">
                         <div className="col">
-                           <h1 className="footer-title">Stitch Clone</h1>
-                           <svg xmlns="http://www.w3.org/2000/svg" width="135" height="40">
+                            <h1 className="footer-title">Stitch Clone</h1>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="135" height="40">
                                 <title>Apple App store badge</title>
                                 <path fill="#A6A6A6" d="M130.197 40H4.729A4.74 4.74 0 0 1 0 35.267V4.726A4.733 4.733 0 0 1 4.729 0h125.468C132.803 0 135 2.12 135 4.726v30.541c0 2.605-2.197 4.733-4.803 4.733z">
-                                    </path>
+                                </path>
                                 <path d="M134.032 35.268a3.83 3.83 0 0 1-3.834 3.83H4.729a3.835 3.835 0 0 1-3.839-3.83V4.725A3.84 3.84 0 0 1 4.729.89h125.468a3.834 3.834 0 0 1 3.834 3.835l.001 30.543z">
                                 </path>
                                 <g fill="#FFF">
@@ -45,24 +45,52 @@ export const App = () => {
                             </svg>
                         </div>
                         <div className="col">
-                           
+                            <h3 className="footer-list-titles">THE SERVICE</h3>
+                            <ul className="footer-list">
+                                <li>Gift Cards</li>
+                                <li>iPhone App</li>
+                                <li>Plus Sizes</li>
+                                <li>Maternity</li>
+                                <li>Petite</li>
+                                <li>Big & Tall</li>
+                                <li>Women's Jeans</li>
+                                <li>Business Casual</li>
+                            </ul>
                         </div>
                         <div className="col">
-                            
+                            <h3 className="footer-list-titles">THE COMPANY</h3>
+                            <ul className="footer-list">
+                                <li>About Us</li>
+                                <li>Press</li>
+                                <li>Investor Relations</li>
+                                <li>Careers</li>
+                                <li>Tech Blog</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <h3 className="footer-list-titles">HAVE A QUESTION?</h3>
+                            <ul className="footer-list">
+                                <li>FAQ</li>
+                                <li>Help</li>
+                            </ul>
+                        </div>
+                        <div className="col">
+                            <h3 className="footer-list-titles">CONTENT</h3>
                         </div>
                     </div>
-                    <div className="container footer-2">
-                        <div className="row">
-                            <div className="col">
-                                <p>Stitch Clone and Clone are trademarks of Stitch Clone, Inc</p>
-                            </div>
-                            <ol className="col">
-                                
-                            </ol>
+                </div>
+                <div className="container footer-2">
+                    <div className="row">
+                        <div className="col">
+                            <h3 className="footer-2-title">Stitch Clone and Clone are trademarks of Stitch Clone, Inc</h3>
                         </div>
+                        <ol className="col">
+
+                        </ol>
                     </div>
                 </div>
             </footer>
         </div>
     )
 }
+
