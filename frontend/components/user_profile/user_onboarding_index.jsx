@@ -12,10 +12,6 @@ class UserOnboardingComponent extends React.Component {
         this.completeStep = this.completeStep.bind(this)
     }
 
-    componentDidMount() {
-        this.props.getStyleItems();
-    }
-
     completeStep() {
         if (this.state.currentStep < 4) {
             this.setState((prevState) => ({
@@ -40,10 +36,6 @@ class UserOnboardingComponent extends React.Component {
     }
 
     render() {
-        if (!this.props.styleItems || Object.values(this.props.styleItems).length === 0) {
-            return null
-        }
-
         return (
             <div className="jumbo">
                 <div className="container">
