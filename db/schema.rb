@@ -48,11 +48,11 @@ ActiveRecord::Schema.define(version: 2020_02_28_202703) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.string "email", null: false
-    t.string "gender", null: false
-    t.string "sub_plan", null: false
+    t.string "gender"
+    t.string "sub_plan"
     t.string "session_token", null: false
     t.string "password_digest", null: false
     t.datetime "created_at", null: false

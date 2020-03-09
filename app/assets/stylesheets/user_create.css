@@ -1,0 +1,82 @@
+.signup-container {
+    padding-top: 54px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 40rem;
+}
+
+.name-container {
+    width: 300px;
+    padding-top: 54px;
+}
+
+.signup-title {
+    font-size: 24px;
+    color:#404347;
+    font-family: Arial, Helvetica, sans-serif;    
+    font-weight: lighter;
+    margin-bottom: 50px;
+}
+
+.signup-list {
+    border-right: #CECBC9 solid 1px; 
+}
+
+.signup-list li p {
+    max-width: 85%;
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    margin-left: 2.2rem;
+}
+
+.signup-list li {
+    padding: 0px 24px 16px;
+    position: relative;
+}
+
+.signup-list li.signup-list-item span svg{
+    width: 1.625rem;
+    height: 1.625rem;
+    margin-top: .125rem;
+    margin: 0;
+    position: absolute;
+    top:.2rem
+}
+
+
+
+.field input {
+    font-weight: 400;
+    font-size: 1.25rem;
+    border-radius: 0;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+    width: 100%;
+    line-height: 1;
+    position: relative;
+    border-bottom: grey solid 1px;
+}
+
+.field input:focus {
+    outline: none;
+}
+
+.signup-button-container {
+    padding-top: 25px;
+}
+
+.continue-button {
+    padding-top: 200px;
+}
+
+.gender-button {
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.button-sizing {
+    width: 121px;
+}

@@ -1,5 +1,4 @@
 class Api::SessionsController < ApplicationController
-
     def create
         @user = User.find_by_credentials(params[:user][:email], params[:user][:password])
 
@@ -7,7 +6,7 @@ class Api::SessionsController < ApplicationController
             login(@user)
             render "api/users/show"
         else  
-            render plain: "NEED TO FIX THIS ERROR"
+            render json: {error: "Invalid Login"}.to_json, status: 400
         end
     end
 

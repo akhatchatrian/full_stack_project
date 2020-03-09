@@ -32,6 +32,10 @@ a {
    color: inherit;
 }
 
+a:hover {
+   text-decoration: underline;
+}
+
 ins {
    background-color:#ff9;
    color:#000;

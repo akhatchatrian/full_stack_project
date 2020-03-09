@@ -1,7 +1,8 @@
 import { connect } from "react-redux";
 import { updateStyleValue, getStyleItems } from "../../actions/style_actions";
-import { signup } from "../../actions/session_actions";
+import { signup, update } from "../../actions/session_actions";
 import UserOnboardingComponent from "./user_onboarding_index";
+
 
 const mapStateToProps = state => ({
     styleItems: state.entities.styleItems,
@@ -11,6 +12,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     updateStyleValue: (styleValue) => dispatch(updateStyleValue(styleValue)),
     signup: (user) => dispatch(signup(user)),
+    update: (user) => dispatch(update(user)),
     getStyleItems: () => dispatch(getStyleItems())
 })
 

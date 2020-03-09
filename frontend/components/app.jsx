@@ -6,7 +6,11 @@ import NavbarContainer from './navbar/navbar_container';
 import LoginFormContainer from './login_form/login_form_container';
 import Home from './home/home_page';
 import UserOnboardingContainer from './user_profile/user_onboarding_container';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
+library.add(fab, faCheckCircle)
 
 export const App = () => {
     return (
@@ -14,7 +18,7 @@ export const App = () => {
             <header className="main-header">
                 <NavbarContainer />
             </header>
-            <div className="main">
+            <div className="main"> 
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <Route exact path="/signup" component={UserOnboardingContainer} />
                 <Route exact path="/" component={Home} />

@@ -20,26 +20,28 @@ export class LoginForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.processForm(user);
+    this.props.processForm(user)
   }
 
   renderErrors() {
-    return(
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
-    );
+    if (this.props.errors) {      
+      return (
+        <ul>
+          {Object.values(this.props.errors).map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   render() {
     return (
-      <div className="jumbo-2">
-        <div className="row">
-          <div className="col text-center">
+      <div className="jumbo jumbo-2">
+        <div className="container">
+          <div className="row justify-center">
 
             <form className="login-form" onSubmit={this.handleSubmit}>
               <div className="login-title text-left">
@@ -48,8 +50,8 @@ export class LoginForm extends React.Component {
               {this.renderErrors()}
               <div className="login-inputs text-left">
                 <label className="login-label">Email</label>
-                <input className="login-field" type="text" 
-                  value={this.state.email} 
+                <input className="login-field" type="text"
+                  value={this.state.email}
                   onChange={this.update('email')}
                 />
               </div>
@@ -60,9 +62,9 @@ export class LoginForm extends React.Component {
                   onChange={this.update('password')}
                 />
               </div>
-                <div className="login-button-container text-left">
-                  <input className="button-primary login-button" type="submit" value="Sign In"/>
-                </div>
+              <div className="login-button-container text-left">
+                <input className="button-primary login-button" type="submit" value="Sign In" />
+              </div>
             </form>
 
           </div>

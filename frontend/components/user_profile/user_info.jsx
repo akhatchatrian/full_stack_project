@@ -9,24 +9,10 @@ class UserInfo extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {
-            currentStep: 0 ,
-            user: {
-                email: "",
-                fist_name: "",
-                last_name: "",
-                password: "",
-                gender: ""
-            }
-        }
+        this.state = { currentStep: this.props.currentUser ? 1 : 0 }
 
         this.nextStep = this.nextStep.bind(this)
         this.prevStep = this.prevStep.bind(this)
-        this.update = this.update.bind(this)
-    }
-
-    update(field) {
-        return e => this.setState({ user: { [field]: e.currentTarget.value } });
     }
 
     nextStep() {
@@ -35,7 +21,6 @@ class UserInfo extends React.Component {
                 currentStep: prevState.currentStep + 1
             }))
         } else {
-            // this.props.signup(this.state.user)
             this.props.completeStep()
         }
     }
@@ -49,25 +34,28 @@ class UserInfo extends React.Component {
     }
 
     render() {
-        switch(this.state.currentStep) {
+        switch (this.state.currentStep) {
             case 0:
-                return <UserPage 
-                            nextStep={this.nextStep} 
-                            prevStep ={this.nextStep} 
-                            update={this.update}
-                        />
+                return <UserPage
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    signup={this.props.signup}
+                    currentUser={this.props.currentUser}
+                />
             case 1:
-                return <NamePage 
-                            nextStep={this.nextStep} 
-                            prevStep ={this.nextStep} 
-                            update={this.update} 
-                        />
-            case 2: 
-                return <GenderPage 
-                            nextStep={this.nextStep} 
-                            prevStep={this.prevStep}
-                            update={this.update}
-                        />
+                return <NamePage
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    update={this.props.update}
+                    currentUser={this.props.currentUser}
+                />
+            case 2:
+                return <GenderPage
+                    nextStep={this.nextStep}
+                    prevStep={this.prevStep}
+                    update={this.props.update}
+                    currentUser={this.props.currentUser}
+                />
             default:
                 return "hello"
         }

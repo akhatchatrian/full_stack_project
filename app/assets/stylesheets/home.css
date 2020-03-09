@@ -26,14 +26,16 @@
 }
 
 .picture-links {
-    max-width: 19.75rem;
     margin: 0 .75rem;
     flex-grow: 0;
     flex-shrink: 1;
     flex-basis: auto;
+    position: relative;
 }
-
-span {
+.picture-links img {
+    display: block
+}
+.picture-links span {
     position: absolute;
     bottom: 2rem;
     padding: .375rem 1rem;

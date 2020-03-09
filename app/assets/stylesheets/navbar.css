@@ -1,5 +1,15 @@
 .main-header {
-    border-bottom: 2px solid #e8e8e8;;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: BrandonText-Regular,stitch-fix-icon-font,sans-serif;
+    font-size: .9375rem;
+    z-index: 10;
+    transition: transform .5s ease;
+    border-bottom: 1px solid;
+    border-color: #d5d3d1;
+    color: #2f3237;
+    background: #fff;
 }
 
 .nav {
@@ -11,10 +21,14 @@
     padding-right: 10px;
     font-size: 15px;
     font-family: BrandonText-Regular, sans-serif;
-    
+    margin: 0 .875rem;
 }
 
 .nav-links > a:first-child{
     font-size: 17px;
     font-family: BrandonText-Regular, serif;
+}
+
+.nav-links > a:first-child:hover {
+    text-decoration: none;
 }
