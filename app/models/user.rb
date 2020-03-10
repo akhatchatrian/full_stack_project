@@ -9,7 +9,7 @@ class User < ApplicationRecord
     has_many :style_values,
         primary_key: :id,
         foreign_key: :user_id,
-        class_name: :StyleProfileValue
+        class_name: :StyleValue
 
     # PASSWORD_REQUIREMENTS = /\A
     #     (?=.{6,})

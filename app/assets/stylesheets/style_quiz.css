@@ -1,5 +1,5 @@
 .quiz-image {
-    padding: 15px 15px 0px 15px;
+    padding: 20px 15px 0px 15px;
 }
 
 .quiz-image div {
@@ -12,13 +12,18 @@
     background-size: cover;
 }
 
+.welcome-message {
+    width: 586px;
+}
+
+
 .welcome-message h2 {
     margin-top: 0px;
 }
 
+
 .title-container {
     background-color: #F2F1EF;
-    overflow: visible;
 }
 
 .title-container h2 {
@@ -42,6 +47,10 @@
 
 .question p {
     margin-bottom: 8px;
+    font-size: 22px;
+    color: #2F3237;
+    font-family: serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .divider {
@@ -81,4 +90,13 @@
     border: 1px solid #C0BDBA;
     background: url(//d3743oz439ic4i.cloudfront.net/assets/modules/style_profile/style_profile_…rrows-ab3d619….svg) no-repeat right 5px center;
     color: #0C828F;
+}
+
+.checkbox-spacing {
+    padding-bottom: 4px;
+}
+
+.button-spacing {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

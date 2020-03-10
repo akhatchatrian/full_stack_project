@@ -128,6 +128,7 @@ ul {
     border: 0px;
     transition: 0.3s;
     cursor: pointer;
+    -webkit-appearance: none;
 }
 
 .button-primary:hover {

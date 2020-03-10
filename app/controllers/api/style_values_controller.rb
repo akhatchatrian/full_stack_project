@@ -1,10 +1,10 @@
-class Api::StyleProfileValuesController < ApplicationController
+class Api::StyleValuesController < ApplicationController
 
 
     before_action :require_login, only: [:create]
 
     def create
-        @style_values = StyleProfileValue.new(style_value_params)
+        @style_values = StyleValue.new(style_value_params)
 
         if @style_values.save
         else
@@ -13,7 +13,7 @@ class Api::StyleProfileValuesController < ApplicationController
     end
 
     def style_value_params
-        permit(:style_profile_value).require(:profile_item_id, :value)
+        params.require(:style_value).permit(:user_id, :brands, :price_range, :colors, :size_shirt, :size_pants, :size_shoes)
     end
 
 end
