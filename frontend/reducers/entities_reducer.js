@@ -4,5 +4,5 @@ import { styleReducer } from "./style_reducer";
 
 export const entitiesReducer = combineReducers({
     user: userReducer,
-    styleItems: styleReducer
+    inventoryItems: styleReducer
 })

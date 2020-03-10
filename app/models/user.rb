@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
     attr_reader :password
     
+    has_many :style_values,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :StyleProfileValue
 
     # PASSWORD_REQUIREMENTS = /\A
     #     (?=.{6,})

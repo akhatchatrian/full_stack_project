@@ -2,6 +2,7 @@ import React from "react";
 import { UserPage } from "./user_page";
 import { NamePage } from "./name_page";
 import { GenderPage } from "./gender_page";
+import { Redirect } from "react-router-dom";
 
 
 class UserInfo extends React.Component {
@@ -20,9 +21,7 @@ class UserInfo extends React.Component {
             this.setState((prevState) => ({
                 currentStep: prevState.currentStep + 1
             }))
-        } else {
-            this.props.completeStep()
-        }
+        } 
     }
 
     prevStep() {
@@ -34,6 +33,7 @@ class UserInfo extends React.Component {
     }
 
     render() {
+        console.log(this.props.history)
         switch (this.state.currentStep) {
             case 0:
                 return <UserPage
@@ -57,11 +57,12 @@ class UserInfo extends React.Component {
                     currentUser={this.props.currentUser}
                 />
             default:
-                return "hello"
+                return <Redirect to="/signup/styleQuiz" />
         }
     }
 
 
 }
 
-export default UserInfo
+
+export default UserInfo;

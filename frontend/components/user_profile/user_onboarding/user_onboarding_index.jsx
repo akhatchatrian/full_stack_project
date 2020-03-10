@@ -1,5 +1,6 @@
 import React from "react"
-import IntroQuestions from "./intro/intro_questions";
+import IntroQuestions from "../intro/intro_questions";
+import { Redirect } from "react-router-dom";
 import UserInfo from "./user_info";
 
 
@@ -13,10 +14,12 @@ class UserOnboardingComponent extends React.Component {
     }
 
     completeStep() {
-        if (this.state.currentStep < 4) {
+        if (this.state.currentStep < 2) {
             this.setState((prevState) => ({
                 currentStep: prevState.currentStep + 1
             }))
+        } else {
+            return <Redirect to="/signup/styleQuiz" />
         }
     }
 
@@ -29,9 +32,10 @@ class UserOnboardingComponent extends React.Component {
                     currentUser={this.props.currentUser}
                     completeStep={this.completeStep}
                     signup={this.props.signup}
-                    update={this.props.update} />
+                    update={this.props.update} 
+                    />
             default:
-                return "DONE WITH USER INFO!!!"
+                return "in the index"
         }
     }
 

@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_02_28_202703) do
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.string "type", null: false
+    t.string "category", null: false
     t.string "brand", null: false
     t.float "price", null: false
     t.string "color", null: false

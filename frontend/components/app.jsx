@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { Route } from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import LoginFormContainer from './login_form/login_form_container';
 import Home from './home/home_page';
-import UserOnboardingContainer from './user_profile/user_onboarding_container';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
+import UserOnboardingContainer from './user_profile/user_onboarding/user_onboarding_container';
+import StyleQuizContainer from './user_profile/style_quiz/style_quiz_container';
+
 
 library.add(fab, faCheckCircle)
 
@@ -20,6 +22,7 @@ export const App = () => {
             </header>
             <div className="main"> 
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
+                <ProtectedRoute exact path="/signup/styleQuiz" component={StyleQuizContainer} />
                 <Route exact path="/signup" component={UserOnboardingContainer} />
                 <Route exact path="/" component={Home} />
             </div>

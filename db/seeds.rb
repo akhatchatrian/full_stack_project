@@ -6,16 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-StyleProfileItem.destroy_all
+Inventory.destroy_all
 
-spi1 = StyleProfileItem.create!(gender: "unisex", category: "intro", category_item: "1")
-spi2 = StyleProfileItem.create!(gender: "unisex", category: "stats", category_item: "2")
-spi3 = StyleProfileItem.create!(gender: "unisex", category: "fit", category_item: "3")
-spi4 = StyleProfileItem.create!(gender: "unisex", category: "style", category_item: "4")
-
-StyleProfileValue.destroy_all
-
-spv1 = StyleProfileValue.create!(profile_item_id: spi1.id, value: "") 
-spv2 = StyleProfileValue.create!(profile_item_id: spi2.id, value: "") 
-spv3 = StyleProfileValue.create!(profile_item_id: spi3.id, value: "") 
-spv4 = StyleProfileValue.create!(profile_item_id: spi4.id, value: "") 
+im1 = Inventory.create!(category: "sweater", brand: "Calvin Klein", price: 119.50, color: "blue", size: "m", gender: "male", "quantity": 4)
+im2_1 = Inventory.create!(category: "pants", brand: "Calvin Klein", price: 69.00, color: "green", size: "l", gender: "female", "quantity": 2)
+im2_2 = Inventory.create!(category: "pants", brand: "Calvin Klein", price: 69.00, color: "green", size: "m", gender: "female", "quantity": 2)
+im2_3 = Inventory.create!(category: "pants", brand: "Calvin Klein", price: 69.00, color: "green", size: "s", gender: "female", "quantity": 2)
+im3_1 = Inventory.create!(category: "shirt", brand: "Calvin Klein", price: 25.00, color: "white", size: "s", gender: "female", "quantity": 1)
+im3_2 = Inventory.create!(category: "shirt", brand: "Calvin Klein", price: 25.00, color: "white", size: "m", gender: "female", "quantity": 1)
+im4_1 = Inventory.create!(category: "shirt", brand: "Bonobos", price: 43.00, color: "purple", size: "m", gender: "male", "quantity": 2)
+im4_2 = Inventory.create!(category: "shirt", brand: "Bonobos", price: 43.00, color: "purple", size: "s", gender: "male", "quantity": 2)
+im4_3 = Inventory.create!(category: "shirt", brand: "Bonobos", price: 43.00, color: "purple", size: "l", gender: "male", "quantity": 2)
+im5_1 = Inventory.create!(category: "shorts", brand: "Bonobos", price: 61.00, color: "blue", size: "s", gender: "female", "quantity": 2)
+im5_2 = Inventory.create!(category: "shorts", brand: "Bonobos", price: 61.00, color: "blue", size: "m", gender: "female", "quantity": 2)
+im5_3 = Inventory.create!(category: "shorts", brand: "Bonobos", price: 61.00, color: "blue", size: "l", gender: "female", "quantity": 2)

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :style_profile_items, only: [:index]
     resources :style_profile_values, only: [:create, :update]
     resources :boxes, only: [:update]
+    resources :inventories, only: [:index]
     resources :box_items, only: [:update]
     resource :session, only: [:create, :destroy]
   end

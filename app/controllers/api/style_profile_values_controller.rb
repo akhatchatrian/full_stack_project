@@ -1,9 +1,12 @@
 class Api::StyleProfileValuesController < ApplicationController
 
-    def update
-        @style_value = StyleProfileValue.find(params[:id])
 
-        if @style_value.update(style_value_params)
+    before_action :require_login, only: [:create]
+
+    def create
+        @style_values = StyleProfileValue.new(style_value_params)
+
+        if @style_values.save
         else
             render json: @style_value.errors.full_messages, status: 422
         end

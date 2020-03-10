@@ -16,7 +16,6 @@ const logoutCurrentUser = () => ({
 });
 
 const receiveErrors = errors => {
-  console.log("errors", errors)
   return ({
     type: RECEIVE_SESSION_ERRORS,
     errors

@@ -14,6 +14,13 @@ export const STYLEUtil = {
             url: `api/style_profile_values/${styleValue.id}`,
             data: { styleValue }
         })
-    )
+    ),
+
+    getInventoryItems: () => (
+        $.ajax({
+            method: "GET",
+            url: "api/inventories"
+        })
+    ),
 
 }

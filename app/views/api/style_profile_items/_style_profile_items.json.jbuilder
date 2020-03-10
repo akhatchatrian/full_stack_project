@@ -1,1 +1,0 @@
-json.extract! style_item, :id, :gender, :category, :category_item
