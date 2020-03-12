@@ -16,6 +16,10 @@
     width: 586px;
 }
 
+.style-selector {
+    cursor: pointer;
+}
+
 
 .welcome-message h2 {
     margin-top: 0px;
@@ -70,6 +74,7 @@
     -webkit-appearance: none;
     margin-top: -2px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
 .checkbox:focus {

@@ -1,6 +1,6 @@
 class StyleValue < ApplicationRecord
 
-    validates :brands, :price_range, :color, :size_shirt, :size_pants, :size_shoes
+    validates :price_range, :size_shirt, :size_pants, :size_shoes, presence: true
 
     belongs_to :user,
         primary_key: :id,

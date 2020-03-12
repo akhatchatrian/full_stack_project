@@ -91,3 +91,17 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.jumbo.video-component {
+    position:relative;
+    max-height: 78rem;
+    overflow: hidden;
+}
+
+.jumbo.video-component video {
+    position:absolute
+}
+
+.jumbo.video-component .button-area {
+    z-index: 15
+}

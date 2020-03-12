@@ -10,6 +10,7 @@ import { fab } from '@fortawesome/free-brands-svg-icons';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import UserOnboardingContainer from './user_profile/user_onboarding/user_onboarding_container';
 import StyleQuizContainer from './user_profile/style_quiz/style_quiz_container';
+import ProfilePageContainer from './user_profile/profile_page/profile_page_container';
 
 
 library.add(fab, faCheckCircle)
@@ -22,7 +23,8 @@ export const App = () => {
             </header>
             <div className="main"> 
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
-                <ProtectedRoute exact path="/signup/styleQuiz" component={StyleQuizContainer} />
+                <ProtectedRoute exact path="/signup/style-quiz" component={StyleQuizContainer} />
+                <ProtectedRoute exact path="/profile-page" component={ProfilePageContainer} />
                 <Route exact path="/signup" component={UserOnboardingContainer} />
                 <Route exact path="/" component={Home} />
             </div>

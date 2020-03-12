@@ -57,7 +57,7 @@ class UserInfo extends React.Component {
                     currentUser={this.props.currentUser}
                 />
             default:
-                return <Redirect to="/signup/styleQuiz" />
+                return <Redirect to="/signup/style-quiz" />
         }
     }
 

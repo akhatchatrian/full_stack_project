@@ -11,6 +11,16 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :StyleValue
 
+    has_many :box_items,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :BoxItem 
+
+    has_many :boxes,
+        primary_key: :id,
+        foreign_key: :user_id,
+        class_name: :Box
+
     # PASSWORD_REQUIREMENTS = /\A
     #     (?=.{6,})
     #     (?=.*/d)

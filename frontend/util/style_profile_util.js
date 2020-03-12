@@ -8,11 +8,11 @@ export const STYLEUtil = {
         })
     ),
 
-    updateStyleValues: (styleValue) => (
+    createStyleValue: (style_value) => (
         $.ajax({
-            method: "PATCH",
-            url: `api/style_profile_values/${styleValue.id}`,
-            data: { styleValue }
+            method: "POST",
+            url: `api/style_values`,
+            data: { style_value }
         })
     ),
 
@@ -22,5 +22,19 @@ export const STYLEUtil = {
             url: "api/inventories"
         })
     ),
+
+    createBox: () => (
+        $.ajax({
+            method: "POST",
+            url: "api/boxes"
+        })
+    ),
+
+    getBoxes: () => (
+        $.ajax({
+            method: "GET",
+            url: `api/boxes`
+        })
+    )
 
 }

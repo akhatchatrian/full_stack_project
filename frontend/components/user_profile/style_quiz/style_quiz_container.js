@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { getInventoryItems, createStyleValue } from "../../../actions/style_actions";
+import { getInventoryItems, createStyleValue, createBox } from "../../../actions/style_actions";
 import StyleQuiz from "./style_quiz";
 
 const mapStateToProps = (state) => ({
@@ -10,7 +10,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = dispatch => ({
     getInventoryItems: () => dispatch(getInventoryItems()),
-    createStyleValue: (styleValues) => dispatch(createStyleValue(styleValues))
+    createStyleValue: (styleValues) => dispatch(createStyleValue(styleValues)),
+    createBox: () => dispatch(createBox())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(StyleQuiz)

@@ -3,9 +3,8 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { formant: :json } do
     resources :users, only: [:create, :update, :show]
-    resources :style_profile_items, only: [:index]
-    resources :style_profile_values, only: [:create, :update]
-    resources :boxes, only: [:update]
+    resources :style_values, only: [:create, :update]
+    resources :boxes, only: [:index, :create, :update]
     resources :inventories, only: [:index]
     resources :box_items, only: [:update]
     resource :session, only: [:create, :destroy]

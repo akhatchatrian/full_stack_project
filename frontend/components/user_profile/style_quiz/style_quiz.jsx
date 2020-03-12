@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class StyleQuiz extends React.Component {
     constructor(props) {
@@ -13,8 +14,9 @@ class StyleQuiz extends React.Component {
             size_pants: "",
             size_shoes: ""
         }
-
-        this.handleChange = this.handleChange.bind(this)
+        console.log(this.props.currentUser)
+        this.handleChange = this.handleChange.bind(this);
+        this.update = this.update.bind(this);
     }
 
     componentDidMount() {
@@ -22,7 +24,7 @@ class StyleQuiz extends React.Component {
     }
 
     update() {
-        this.props.createStyleValue(this.state)
+        this.props.createStyleValue(this.state).then(this.props.createBox())
     }
 
     handleChange(event, property) {
@@ -120,10 +122,10 @@ class StyleQuiz extends React.Component {
                                     className="style-selector"
                                     onChange={(e) => this.setState({price_range: e.target.value})}>
                                     <option value>--</option>
-                                    <option value="$25">$25</option>
-                                    <option value="$50">$50</option>
-                                    <option value="$75">$75</option>
-                                    <option value="$100">$100</option>
+                                    <option value="25">$25</option>
+                                    <option value="50">$50</option>
+                                    <option value="75">$75</option>
+                                    <option value="100">$100</option>
                                     <option value="I'm rich">I'm rich</option>
                             </select>
                         </div>
@@ -145,9 +147,9 @@ class StyleQuiz extends React.Component {
                                     className="style-selector"
                                     onChange={(e) => this.setState({size_shirt: e.target.value})}>
                                     <option value>--</option>
-                                    <option value="small">small</option>
-                                    <option value="medium">medium</option>
-                                    <option value="large">large</option>
+                                    <option value="s">small</option>
+                                    <option value="m">medium</option>
+                                    <option value="l">large</option>
                             </select>
                         </div>
                     </div>
@@ -188,7 +190,7 @@ class StyleQuiz extends React.Component {
 
                     <div className="row justify-center">
                         <div className="question button-spacing">
-                            <button className="button-primary" onClick={this.update}>Get your first box!</button>    
+                            <Link to="/profile-page" className="button-primary" onClick={this.update}>Get your first box!</Link>  
                         </div>
                     </div>
 
