@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Stitch Clone
 
-Things you may want to cover:
+Stitch Clone is a personalized styling service that offers unique fashions to those who normally don't spend much time shopping for themselves.
 
-* Ruby version
+# Styling
 
-* System dependencies
+Stitch Clone is closely modeled to resemble the apperance of Stitch Fix.
 
-* Configuration
+# Front-end and backend authentication
 
-* Database creation
+The initial user on-boarding process consists of a few test questions, followed by a step-by-step form that alternates between user authentication and completion of they style guide, which will be used to determine the appropriate style profile for the user.Passwords are hashed and salted using Bcrypt.
 
-* Database initialization
+# Technologies used
+* Rails
+* Postgres
+* React
+* Heroku
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Future implementations
+* Add error handling
+* Complete box creation algorithm
+* Allow user to purchase items and leave feedback
+* Implement Google authentication
