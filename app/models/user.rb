@@ -21,13 +21,6 @@ class User < ApplicationRecord
         foreign_key: :user_id,
         class_name: :Box
 
-    # PASSWORD_REQUIREMENTS = /\A
-    #     (?=.{6,})
-    #     (?=.*/d)
-    #     (?=.*[a-z])
-    #     (?=.*[A-Z])
-    # /x
-
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
         user && user.is_password?(password) ? user : nil
