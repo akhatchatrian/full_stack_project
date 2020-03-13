@@ -2,11 +2,14 @@ class Api::BoxesController < ApplicationController
 
     def index
         @boxes = Box.all
-        debugger
+
+        @box = @boxes[@boxes.length - 1]
+
+        
     end
 
     def create 
-        @user = User.find_by(id: current_user.id) #just for testing, don't forget to change!!!
+        @user = User.find_by(id: current_user.id) 
         @box = Box.create!(user_id: @user.id)
 
         @inventory = Inventory.all
@@ -33,9 +36,8 @@ class Api::BoxesController < ApplicationController
             total_cost += pick.price
             BoxItem.create!(user_id: @user.id, box_id: @box.id, inventory_id: pick.id)
         end
-        debugger
+
         @box.update(total_cost: total_cost)
-        render "/api/boxes/index"
     end
 
 end

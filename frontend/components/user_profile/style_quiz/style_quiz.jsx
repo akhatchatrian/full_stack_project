@@ -14,7 +14,6 @@ class StyleQuiz extends React.Component {
             size_pants: "",
             size_shoes: ""
         }
-        console.log(this.props.currentUser)
         this.handleChange = this.handleChange.bind(this);
         this.update = this.update.bind(this);
     }
@@ -67,7 +66,7 @@ class StyleQuiz extends React.Component {
     }
 
     renderBrands() {
-        let brandsList = [...new Set(Object.values(this.props.inventoryItems).map(b => b.brand))]
+        let brandsList = [...new Set(Object.values(this.props.inventoryItems).map(b => b.brand))]        
         return this.renderList(brandsList, "brands");
     }
 

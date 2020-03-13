@@ -17,7 +17,7 @@ const receiveBoxes = (boxes) => ({
 })
 
 const receiveBox = (box) => ({
-    type: RECEIVE_BOXES,
+    type: RECEIVE_BOX,
     box
 })
 
@@ -44,4 +44,9 @@ export const createBox = () => dispatch => (
 export const getBoxes = () => dispatch => (
     STYLEUtil.getBoxes()
         .then(boxes => dispatch(receiveBoxes(boxes)))
+)
+
+export const getCurrentBox = () => dispatch => (
+    STYLEUtil.getBox()
+    .then(boxes => dispatch(receiveBox(boxes)))
 )

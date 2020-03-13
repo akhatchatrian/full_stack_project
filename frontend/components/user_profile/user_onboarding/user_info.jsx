@@ -33,7 +33,6 @@ class UserInfo extends React.Component {
     }
 
     render() {
-        console.log(this.props.history)
         switch (this.state.currentStep) {
             case 0:
                 return <UserPage
