@@ -28,15 +28,15 @@ ActiveRecord::Schema.define(version: 2020_03_10_213353) do
 
   create_table "boxes", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.float "total_cost"
-    t.float "purchase_cost"
+    t.float "total_cost", null: false
+    t.float "purchase_cost", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_boxes_on_user_id"
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.string "category", null: false
+    t.string "type", null: false
     t.string "brand", null: false
     t.float "price", null: false
     t.string "color", null: false
@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2020_03_10_213353) do
 
   create_table "style_values", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.text "brands", default: [], array: true
+    t.string "brands", default: [], array: true
     t.string "price_range"
-    t.text "colors", default: [], array: true
+    t.string "colors", default: [], array: true
     t.string "size_shirt"
     t.string "size_pants"
     t.string "size_shoes"
