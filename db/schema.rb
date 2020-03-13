@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(version: 2020_03_10_213353) do
 
   create_table "style_values", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.text "brands", array: true, default: []
+    t.text "brands", default: [], array: true
     t.string "price_range"
-    t.text "colors", array: true, default: []
+    t.text "colors", default: [], array: true
     t.string "size_shirt"
     t.string "size_pants"
     t.string "size_shoes"
