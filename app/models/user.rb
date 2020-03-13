@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
     attr_reader :password
     
-    has_many :style_values,
+    has_many :styles,
         primary_key: :id,
         foreign_key: :user_id,
         class_name: :StyleValue

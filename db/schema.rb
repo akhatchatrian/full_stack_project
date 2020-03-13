@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_213353) do
+ActiveRecord::Schema.define(version: 2020_03_13_180135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_213353) do
   end
 
   create_table "inventories", force: :cascade do |t|
-    t.string "type", null: false
+    t.string "category", null: false
     t.string "brand", null: false
     t.float "price", null: false
     t.string "color", null: false
