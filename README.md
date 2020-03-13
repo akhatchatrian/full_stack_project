@@ -12,6 +12,12 @@ Stitch Clone is closely modeled to resemble the apperance of Stitch Fix.
 
 The initial user on-boarding process consists of a few test questions, followed by a step-by-step form that alternates between user authentication and completion of they style guide, which will be used to determine the appropriate style profile for the user.Passwords are hashed and salted using Bcrypt.
 
+# Technologies used
+* Rails
+* Postgres
+* React
+* Heroku
+
 # Future implementations
 * Add error handling
 * Complete box creation algorithm
